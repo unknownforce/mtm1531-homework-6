@@ -18,19 +18,20 @@
 </head>
 
 <body>
-	<a href="add.php">Add a Movie!</a>
-
-	<ol>
-		<?php foreach($results as $movies) : ?>
-			<li>
-				<strong><a href="single.php?id=<?php echo $movies['id']; ?>"><?php echo $movies['movietitle']; ?></a></strong>
-				<p>
-					<a href="edit.php?id=<?php echo $movies['id']; ?>">Edit</a>
-					<a href="delete.php?id=<?php echo $movies['id']; ?>">Delete</a>				
-				</p>
-			</li>
-		<?php endforeach; ?>
-	</ol>
-
+	<div>
+		<a href="add.php">Add a Movie!</a>
+	
+		<ol>
+			<?php foreach($results as $movies) : ?>
+				<li>
+					<strong><a href="single.php?id=<?php echo $movies['id']; ?>"><?php echo $movies['movietitle']; ?></a></strong>
+					<p>
+						<a href="edit.php?id=<?php echo $movies['id']; ?>">Edit</a>
+						<a href="delete.php?id=<?php echo $movies['id']; ?>">Delete</a>				
+					</p>
+				</li>
+			<?php endforeach; ?>
+		</ol>
+	</div>
 </body>
 </html>

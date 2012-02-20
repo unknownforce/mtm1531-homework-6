@@ -35,12 +35,13 @@
 </head>
 
 <body>
-	<h1><?php echo $results['movietitle']; ?></h1>
-	<p>Directed by: <b><?php echo $results['director']; ?></b></p>
-	<p>Release Date: <?php echo $results['releasedate']; ?></p>
-	
-	<p><a href="index.php">Back</a></p>
-	
+	<div>
+		<h1><?php echo $results['movietitle']; ?></h1>
+		<p>Directed by: <b><?php echo $results['director']; ?></b></p>
+		<p>Release Date: <?php echo $results['releasedate']; ?></p>
+		
+		<p><a href="index.php">Back</a></p>
+	</div>
 
 </body>
 </html>

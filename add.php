@@ -45,6 +45,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Add Movie</title>
+	<link href="css/general.css" rel="stylesheet">
 </head>
 
 <body>
@@ -53,16 +54,15 @@
 		<div>
 			<label for="movietitle">Movie Name<?php if (isset($errors['movietitle'])) : ?> <strong> is required</strong><?php endif; ?></label>
 			<input id="movietitle" name="movietitle" value="<?php echo $movietitle; ?>" required> <em>ie. Scary Movie</em>
-		</div>	
-		<div>
+		
 			<label for="releasedate">Release Date<?php if (isset($errors['releasedate'])) : ?> <strong> is required</strong><?php endif; ?></label>
 			<input type="date" id="releasedate" name="releasedate" value="<?php echo $releasedate; ?>" required> <em>ie. YYYY-MM-DD</em>
-		</div>	
-		<div>
+	
 			<label for="director">Director<?php if (isset($errors['director'])) : ?> <strong> is required</strong><?php endif; ?></label>
 			<input id="director" name="director" value="<?php echo $director; ?>" required> <em>ie. Steven Spielberg</em>
-		</div>	
-		<button type="submit">Add</button>
+		
+			<button type="submit">Add</button>
+		</div>
 	</form>
 
 

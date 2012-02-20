@@ -2,6 +2,7 @@
 /* CSS Document */
 
 body {
+	margin:0;
 	font: normal 125%/1 Georgia, "Times New Roman", Times, serif;	
 }
 
@@ -25,3 +26,13 @@ p {
 	font: normal 75%/1 Georgia, "Times New Roman", Times, serif;	
 	
 }
+
+div {
+	margin:0 auto;
+	padding:1.5em;
+	width:30%;
+	background-color:#FFC;
+}
+
+
+
