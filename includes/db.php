@@ -1,28 +1,12 @@
 <?php
-
-// Creates a connection to the database
-
-// We are using PDO to abstract away the database tyoe we are connecting to
-// PDO allows us to connect to many different database types: MySQL, SQLite, MSSQL, Oracle, etc.
-
-// WAMP's default user is 'root'
-// MAMP's default user is also 'root'
-// Edumedia's username is your Algonquin username, like chan0260
-$user = 'root'; //WAMP's default user is 'root'
-
-
-// WAMP's default password is nothing, an empty string, ''
-// MAMP's default password is 'root'
-// Edumedia's password is your student number, without the first 0
-$pass = 'root';
-
-// Data Source Name
-// The location and the name of the database
-$dsn = 'mysql:dbname=chan0260;host=localhost';
-// localhost above means the database server is on the same computer as this PHP file
-
-// Open the connection to the database using PDO
-$db = new PDO($dsn, $user, $pass);
-
-// Force our connectiong to be UTF-8
-$db->exec('SET NAMES utf8');
+	
+	//Gets an environment variable we created in the .htaccess file
+	//This is the best way to keep username and passwords out of public GitHub repos
+	$user = getenv('DB_USER'); // echo $user; // Check if it works
+	$pass = getenv('DB_PASS');
+	$dsn = getenv('DB_DSN');
+	
+	// Opens a connection to the database and stores it in a variable
+	$db = new PDO($dsn, $user, $pass);
+	// Makes sure we talk to the database in UTF-8, so we can support more than just English
+	$db->exec('SET NAMES utf8');
